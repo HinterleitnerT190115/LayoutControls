@@ -24,5 +24,23 @@ namespace LayoutControls
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            for (int column = 0; column < 2; column++)
+            {
+                for (int row = 0; row < 6; row++)
+                {
+                    var b = new Button()
+                    {
+                        Content = $"Button {row} {column}"
+                    };
+
+                    LeftButtonGrid.Children.Add(b);
+                    Grid.SetRow(b, row);
+                    Grid.SetColumn(b, column);
+                }
+            }
+        }
     }
 }

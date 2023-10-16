@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LayoutControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File"/>
@@ -43,7 +44,7 @@
                 <ProgressBar Height="25" Width="200" Maximum="100" Value="50"/>
             </StatusBarItem>
         </StatusBar>
-        <Grid DockPanel.Dock="Left">
+        <Grid Name="LeftButtonGrid" DockPanel.Dock="Left">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -56,18 +57,6 @@
                 <ColumnDefinition Width="65"/>
                 <ColumnDefinition Width="65"/>
             </Grid.ColumnDefinitions>
-            <Button Content="Button 0 0" Grid.Column="0" Grid.Row="0"/>
-            <Button Content="Button 0 1" Grid.Column="1" Grid.Row="0"/>
-            <Button Content="Button 1 0" Grid.Column="0" Grid.Row="1"/>
-            <Button Content="Button 1 1" Grid.Column="1" Grid.Row="1"/>
-            <Button Content="Button 2 0" Grid.Column="0" Grid.Row="2"/>
-            <Button Content="Button 2 1" Grid.Column="1" Grid.Row="2"/>
-            <Button Content="Button 3 0" Grid.Column="0" Grid.Row="3"/>
-            <Button Content="Button 3 1" Grid.Column="1" Grid.Row="3"/>
-            <Button Content="Button 4 0" Grid.Column="0" Grid.Row="4"/>
-            <Button Content="Button 4 1" Grid.Column="1" Grid.Row="4"/>
-            <Button Content="Button 5 0" Grid.Column="0" Grid.Row="5"/>
-            <Button Content="Button 5 1" Grid.Column="1" Grid.Row="5"/>
         </Grid>
         <Grid DockPanel.Dock="Right">
             <Grid.RowDefinitions>
