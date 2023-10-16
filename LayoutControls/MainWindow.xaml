@@ -6,7 +6,112 @@
         xmlns:local="clr-namespace:LayoutControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File"/>
+            <MenuItem Header="Edit"/>
+        </Menu>
+        <ToolBar DockPanel.Dock="Top">
+            <ToolBarTray>
+                <ToolBar>
+                    <Button>New</Button>
+                    <Button>Open</Button>
+                    <Button>Save</Button>
+                </ToolBar>
+            </ToolBarTray>
+            <ToolBarTray>
+                <ToolBar>
+                    <Image Source="/Images/Cut.png"/>
+                    <Image Source="/Images/Copy.png"/>
+                    <Image Source="/Images/Paste.png"/>
+                    <Button Content="Paste"/>
+                </ToolBar>
+            </ToolBarTray>
+        </ToolBar>
+        <StatusBar DockPanel.Dock="Bottom">
+            <!-- The Grid didn't work, because:
+                 - The Seperator doesn't show up
+                 - The Grid was only half the width of the Statusbar
+                 - Alignment for some reason also didn't work   
+            -->
+            <Separator Margin="100,0,0,0"/>
+            <StatusBarItem HorizontalContentAlignment="Center">
+                <Label Content="C:\path\of\current\file.txt" HorizontalAlignment="Center"/>
+            </StatusBarItem>
+            <Separator Margin="350,0,0,0" HorizontalContentAlignment="Right"/>
+            <StatusBarItem HorizontalContentAlignment="Right">
+                <ProgressBar Height="25" Width="200" Maximum="100" Value="50"/>
+            </StatusBarItem>
+        </StatusBar>
+        <Grid DockPanel.Dock="Left">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="65"/>
+                <ColumnDefinition Width="65"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Button 0 0" Grid.Column="0" Grid.Row="0"/>
+            <Button Content="Button 0 1" Grid.Column="1" Grid.Row="0"/>
+            <Button Content="Button 1 0" Grid.Column="0" Grid.Row="1"/>
+            <Button Content="Button 1 1" Grid.Column="1" Grid.Row="1"/>
+            <Button Content="Button 2 0" Grid.Column="0" Grid.Row="2"/>
+            <Button Content="Button 2 1" Grid.Column="1" Grid.Row="2"/>
+            <Button Content="Button 3 0" Grid.Column="0" Grid.Row="3"/>
+            <Button Content="Button 3 1" Grid.Column="1" Grid.Row="3"/>
+            <Button Content="Button 4 0" Grid.Column="0" Grid.Row="4"/>
+            <Button Content="Button 4 1" Grid.Column="1" Grid.Row="4"/>
+            <Button Content="Button 5 0" Grid.Column="0" Grid.Row="5"/>
+            <Button Content="Button 5 1" Grid.Column="1" Grid.Row="5"/>
+        </Grid>
+        <Grid DockPanel.Dock="Right">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0" Margin="0,0,0,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Button 0 0"  Grid.Column="0" Grid.Row="0"/>
+                <Button Content="Button 0 1"  Grid.Column="1" Grid.Row="0"/>
+                <Button Content="Button 1 0"  Grid.Column="0" Grid.Row="1"/>
+                <Button Content="Button 1 1"  Grid.Column="1" Grid.Row="1"/>
+                <Button Content="Button 2 0"  Grid.Column="0" Grid.Row="2"/>
+                <Button Content="Button 2 1"  Grid.Column="1" Grid.Row="2"/>
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Button 0 0"  Grid.Column="0" Grid.Row="0"/>
+                <Button Content="Button 0 1"  Grid.Column="1" Grid.Row="0"/>
+                <Button Content="Button 0 2"  Grid.Column="2" Grid.Row="0"/>
+                <Button Content="Button 1 0"  Grid.Column="0" Grid.Row="1"/>
+                <Button Content="Button 1 1"  Grid.Column="1" Grid.Row="1"/>
+                <Button Content="Button 1 2"  Grid.Column="2" Grid.Row="1"/>
+            </Grid>
+        </Grid>
+        <Label Content="Last Element fills the rest" DockPanel.Dock="Bottom"/>
+    </DockPanel>
 </Window>
