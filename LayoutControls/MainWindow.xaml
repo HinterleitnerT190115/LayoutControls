@@ -112,6 +112,35 @@
                 <Button Content="Button 1 2"  Grid.Column="2" Grid.Row="1"/>
             </Grid>
         </Grid>
-        <Label Content="Last Element fills the rest" DockPanel.Dock="Bottom"/>
+        <TabControl>
+            <TabItem Header="TabItem No1 Canvas">
+                <Canvas>
+                    <Button Canvas.Left="100" Canvas.Top="50"  Content="TestButton 1"/>
+                    <Button Canvas.Left="200" Canvas.Top="90"  Content="TestButton 2"/>
+                    <Button Canvas.Left="125" Canvas.Top="250" Content="TestButton 3"/>
+                    <Button Canvas.Left="300" Canvas.Top="170" Content="TestButton 4"/>
+                </Canvas>   
+            </TabItem>
+            <TabItem Header="TabItem No2 Stackpanel">
+                <StackPanel>
+                    <Button Width="200" Content="TestButton 1"/>
+                    <Button Width="200" Content="TestButton 2"/>
+                    <Button Content="TestButton 3"/>
+                    <Button Width="200" Content="TestButton 4"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="TabItem No3 WrapPanel">
+                <WrapPanel>
+                    <Button Content="TestButton 1" Width="100"/>
+                    <Button Content="TestButton 2" Width="100"/>
+                    <Button Content="TestButton 3" Width="50"/>
+                    <Button Content="TestButton 4" Width="100"/>
+                    <Button Content="TestButton 5" Width="100"/>
+                    <Button Content="TestButton 6" Width="100"/>
+                    <Button Content="TestButton 7" Width="100"/>
+                    <Button Content="TestButton 8" Width="100"/>
+                </WrapPanel>
+            </TabItem>
+        </TabControl>
     </DockPanel>
 </Window>
